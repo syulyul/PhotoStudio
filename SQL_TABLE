@@ -1,0 +1,135 @@
+--회원 테이블
+create table memberho(
+id varchar2(25) primary key,
+password1 varchar2(25) not null,
+password2 varchar2(25) not null,
+name varchar2(25),
+email varchar2(30),
+phone varchar2(25)
+);
+
+create sequence member_seq;
+
+select * from memberho;
+commit;
+
+
+
+
+--문의 게시판 테이블
+create table board(
+num number,
+id varchar2(20) not null,
+writer varchar2(20),
+email varchar2(50),
+subject varchar2(50),
+password varchar2(20),
+reg_date date,
+ref number,
+re_step number,
+re_level number,
+readcount number,
+content varchar2(500)
+);
+
+create sequence board_seq;
+
+select * from board;
+
+commit;
+
+
+
+--예약 테이블
+create table reservation(
+num number,
+id varchar2(20) not null,
+name varchar2(20) not null,
+phone varchar2(20) not null,
+rdate varchar2(20) not null,
+time varchar2(20) not null,
+people varchar2(20),
+place varchar2(20) not null,
+service varchar2(20) not null,
+info varchar2(500)
+);
+
+create sequence num_seq;
+
+select * from reservation;
+commit;
+
+
+
+
+--관리자 계정
+--관리자 로그인
+create table admin_account(
+id varchar2(25) primary key,
+password varchar2(25) not null
+);
+insert into admin_account values('admin','admin1234');
+select * from admin_account;
+commit;
+--drop table admin_account;
+
+
+--공지사항
+create table notice_board(
+notice_num number,
+notice_writer varchar2(20),
+notice_email varchar2(50),
+notice_subject varchar2(50),
+notice_password varchar2(20),
+notice_reg_date date,
+notice_ref number,
+notice_re_step number,
+notice_re_level number,
+notice_readcount number,
+notice_content varchar2(500)
+);
+
+create sequence notice_board_seq;
+
+commit;
+
+--1번 공지
+--제목 : 실내 스튜디오 장기 렌탈 이벤트
+--내용 : 실내 스튜디오 장기렌탈을 하시고자 하시는 분들을 대상으로,
+--저렴한 가격에 장소, 장비, 각종 소품 등을 대여해 드리고 있습니다.
+
+--6개월의 200,000원(부가세 별도)의 가격으로 렌탈을 진행해 드리고 있으니 언제든지 사무실로 연락주세요.
+
+--2번 공지
+--제목 : [이벤트]증명사진 1+1
+--내용 : 1인 촬영 가격으로 2인을 촬영해 드립니다.
+
+--친구, 연인, 가족 등과 함께 오셔서 촬영해 보세요.
+
+--1+1 이벤트 가격으로 15,000원에 2분의 증명사진을 찍어드립니다.
+
+select * from notice_board;
+
+
+
+--이용후기 게시판
+create table review(
+num number,
+id varchar2(20) not null,
+writer varchar2(20),
+email varchar2(50),
+subject varchar2(50),
+password varchar2(20),
+reg_date date,
+ref number,
+re_step number,
+re_level number,
+readcount number,
+content varchar2(500)
+);
+
+create sequence review_seq;
+
+select * from review;
+
+commit;
