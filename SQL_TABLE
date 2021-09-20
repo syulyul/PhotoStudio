@@ -10,10 +10,10 @@ phone varchar2(25)
 
 create sequence member_seq;
 
-select * from memberho;
+SELECT * FROM MEMBERHO;
 commit;
-
-
+--drop table memberho;
+--drop sequence member_seq;
 
 
 --문의 게시판 테이블
@@ -36,6 +36,8 @@ create sequence board_seq;
 
 select * from board;
 
+--drop table board;
+--drop sequence board_seq;
 commit;
 
 
@@ -52,13 +54,38 @@ people varchar2(20),
 place varchar2(20) not null,
 service varchar2(20) not null,
 info varchar2(500)
+--primary key(rdate,time)
 );
 
 create sequence num_seq;
-
+--drop table reservation;
+--drop sequence num_seq;
 select * from reservation;
 commit;
 
+
+--이용후기 게시판
+create table review(
+num number,
+id varchar2(20) not null,
+writer varchar2(20),
+email varchar2(50),
+subject varchar2(50),
+password varchar2(20),
+reg_date date,
+ref number,
+re_step number,
+re_level number,
+readcount number,
+content varchar2(500)
+);
+
+create sequence review_seq;
+--drop sequence review_seq;
+--drop table review;
+select * from review;
+
+commit;
 
 
 
@@ -91,8 +118,7 @@ notice_content varchar2(500)
 
 create sequence notice_board_seq;
 
-commit;
-
+--관리자 계정에서 공지사항 직접 등록하기
 --1번 공지
 --제목 : 실내 스튜디오 장기 렌탈 이벤트
 --내용 : 실내 스튜디오 장기렌탈을 하시고자 하시는 분들을 대상으로,
@@ -108,28 +134,8 @@ commit;
 
 --1+1 이벤트 가격으로 15,000원에 2분의 증명사진을 찍어드립니다.
 
-select * from notice_board;
-
-
-
---이용후기 게시판
-create table review(
-num number,
-id varchar2(20) not null,
-writer varchar2(20),
-email varchar2(50),
-subject varchar2(50),
-password varchar2(20),
-reg_date date,
-ref number,
-re_step number,
-re_level number,
-readcount number,
-content varchar2(500)
-);
-
-create sequence review_seq;
-
-select * from review;
-
 commit;
+
+select * from notice_board;
+--drop table notice_board;
+--drop sequence notice_board_seq;
