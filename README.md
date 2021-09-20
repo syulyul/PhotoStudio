@@ -12,4 +12,4 @@
 ![블로그8](https://user-images.githubusercontent.com/90892290/133984804-f9c98c37-77dc-4304-bdd5-8e3415174bd7.png)
 ![블로그9](https://user-images.githubusercontent.com/90892290/133984812-6cc5e316-d0bc-428b-b835-7e16b48519b2.png)
 ![블로그10](https://user-images.githubusercontent.com/90892290/133984818-4c36b1d7-ad89-4104-806d-fbc9cc1040e9.png)
-![블로그11](https://user-images.githubusercontent.com/90892290/133997618-75029d9b-9c50-48ec-867b-db3f0d4712f9.png)
+![블로그11](https://user-images.githubusercontent.com/90892290/133997796-072e60e9-b8da-424d-8626-de0e84a930a2.png)
